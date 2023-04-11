@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deptree": "depcruise --exclude \"^(node_modules|forks|__tests__)\" -T dot ./ | dot -T svg > dependenciesGraph.svg"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +20,8 @@
     "fastify-plugin": "^4.5.0",
     "node-schedule": "^2.1.1",
     "pino-pretty": "^10.0.0"
+  },
+  "devDependencies": {
+    "dependency-cruiser": "^12.11.1"
   }
 }
